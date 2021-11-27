@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+ {% block content %}
+	{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'mortgage/style.css' %}">
+ <h1> Mortagage Calculator</h1>
+ <form method="POST"> {% csrf_token %} 
+ {{form.as_p}}
+ <input type="submit" value="Save">
+ </form>
+
+ {% endblock %}

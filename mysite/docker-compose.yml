@@ -1,0 +1,8 @@
+version: '3'
+services:
+  postgres_db:
+    image: 'postgres'
+  django-polls:
+     build: .
+     ports:
+       - "8080:8080"

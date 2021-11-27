@@ -1,0 +1,34 @@
+
+# --------- Example Python Program for dropping an SQLite Table---------
+
+ 
+
+# import the sqlite3 module
+
+import sqlite3
+
+ 
+
+# Connect to the demo database
+
+connection  = sqlite3.connect("db.sqlite3")
+
+ 
+
+# Get a cursor object
+
+cursor      = connection.cursor()
+
+ 
+
+# Execute the DROP Table SQL statement
+
+dropTableStatement = "DROP TABLE demotable"
+
+cursor.execute(dropTableStatement)
+
+ 
+
+# Close the connection object
+
+connection.close()

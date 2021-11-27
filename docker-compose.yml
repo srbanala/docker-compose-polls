@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+
+  postgres:
+    image: 'postgres'
+    environment:
+      restart: 'always'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'welcome1'
+      POSTGRES_DB: 'postgres'
+      HOST: '0.0.0.0'
+      PORT : '5432'
+      TIMEZONE: 'UTC'
+    volumes:
+      pg_data: /var/lib/postgresql/data/postgres
+
+
+  pgadmin:
+    image: 'dpage/pgadmin4'
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'srbanala13@gmail.com'
+      PGADMIN_DEFAULT_PASSWORD: 'welcome1'
+      PORT: '80'
+    ports:
+      - '80:80'
+  django-polls:
+    build: .
+
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_volume: pg_data
+
+
+
+
+
+
+
+
+

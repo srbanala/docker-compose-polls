@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'mortgage/style.css' %}">
+<h1> File store details </h1>
+<form enctype="multipart/form-data" method="POST"> {% csrf_token %}
+<!{{form.as_p}}
+<input type="submit" value="Upload">
+</form>
+
+{% endblock %}
+

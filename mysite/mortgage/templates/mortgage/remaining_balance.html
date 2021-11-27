@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+ {% block content %}
+ {% load static %}
+ <link rel="stylesheet" type="text/css" href="{% static 'mortgage/style.css' %}">
+<h1>Remaining Balance Details</h1>
+<body>
+<p> Remaining amount due: {{Remaining_balance}}</p>
+ </body>
+ {% endblock %}

@@ -1,0 +1,26 @@
+I this is savitha speaking
+***I have 7+ Years of experince in development
+In these years I
+***Have been working working with web application and service development majorly java J2ee technologies in domains like Finance,telecom and healthcare.
+***
+***
+***Experience in developing application using Spring framework modules like spring MVC,spring IOC,spring boot and spring security.
+***Hands on experience developing data models using ORM tools like Hybernate.
+***Experience with various Relational database like Oracle,SQL Server and No SQL database like MangoDB.
+***Strong Experience in developing and cosuming SOAP and REST besed Webservice
+****Experience with AWS,Focusing on services like EC
+
+***Hands on experince in Build tools like Maven,ANT.
+***Experince in different code repository tools like GITHUB,Totetoise SVN
+Worked on  Windows,Unix and Linux Platforms.
+
+coming to current project
+I am curently working with JPMC 
+
+---I have been configuring the micro services with spring boot and also integrated with Sprong Aop and spring security
+to structure the complete model layer of the application with Hybernate ORM
+---Equally I have been developing UI component using Angular
+---I also have been working with AWS services for deploying the application creating the notification system.
+
+
+

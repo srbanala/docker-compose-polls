@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<style>
+ li {
+     text-align:center;
+     color:blue;
+}
+</style>
+<h1>Image details</h1>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'mortgage/style.css' %}">
+</head>
+<body>
+
+<li>  File   {{ Name }}    </li>
+<img src={{ Image }} alt=" my image ">
+</body>
+</html>

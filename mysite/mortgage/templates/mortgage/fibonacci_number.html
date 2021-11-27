@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<style>
+ li {
+     text-align:center;
+     color:blue;
+}
+</style>
+<h1>Fibonacci number </h1>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'mortgage/style.css' %}">
+</head>
+<body>
+
+<li> Fibonacci number sequence of {{number}}  is 
+ {% for item in Fibonacci_number %}
+          {{item}}  
+        {% endfor%} </li>
+  <!{{Fibonacci_number}}>
+</body>
+</html>
+
