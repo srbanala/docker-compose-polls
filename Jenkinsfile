@@ -19,6 +19,7 @@ pipeline {
 
        stage('Deploy') {
          steps {
+            sh ' chmod 777 * '
             sshagent(credentials : ['ec2-user'])
             {
             sh 'ssh -o StrictHostKeyChecking=no ec2-user@10.0.2.119 uptime'
