@@ -12,8 +12,8 @@ services:
       HOST: '0.0.0.0'
       PORT : '5432'
       TIMEZONE: 'UTC'
-    #volumes:
-     # pg_data: /var/lib/postgresql/data/postgres
+    volumes:
+     - pg_data:/var/lib/postgresql/data
 
 
   pgadmin:
@@ -26,9 +26,10 @@ services:
       - '80:80'
   django-polls:
     build: .
-
     ports:
-      - "8000:8000"
+      - '8000:8000'
+volumes:
+   pg_data:
 
 
 

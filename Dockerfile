@@ -1,33 +1,32 @@
-# Base image
-From ubuntu:latest
+# Specify base image 
 
-# install dependencies.
+FROM ubuntu:latest
+
+# Install dependenies for application
 
 RUN mkdir ./usr/dev
 WORKDIR  ./usr/dev
 
 RUN  apt-get update &&  apt-get -y upgrade
-
-
 RUN echo Y|apt-get install python3
 RUN apt-get install  -y python3-pip
-RUN  pip3 install virtualenv
-#RUN apt-get  install django
 
+RUN pip3 install virtualenv
+RUN virtualenv myenv
+RUN chmod 755 ./myenv/bin/activate
+RUN $source ./myenv/bin/activate
+
+#RUN pip install django
 RUN  apt-get install -y libpq-dev
 RUN  pip install psycopg2
-RUN virtualenv venv
-RUN chmod 755 ./venv/bin/activate 
-RUN ./venv/bin/activate
-RUN pip install django
-RUN django-admin startproject mysite
-#RUN export PYTHONPATH=$PYHONPATH:/usr/lib/python3.8
 
-#WORKDIR  ./usr/dev/venv
+WORKDIR ./django-polls/dist
 COPY ./ ./
-#RUN pip install --user  ./django-polls-0.1.tar.gz
+RUN python3 -m pip install --user ./django-polls-0.1.tar.gz
 
+#EXPOSE 8080
 # Run Default Command.
 
-#RUN export PATH=$PATH:/usr/dev/venv/bin
-CMD ["/usr/dev/venv/bin/python3" ,"./mysite/manage.py","runserver","0:8000"]
+CMD ["python3","./mysite/manage.py","runserver","0:8000"]
+
+
