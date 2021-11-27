@@ -19,13 +19,17 @@ pipeline {
 
        stage('Deploy') {
          steps {
-
-            sh 'docker-compose up --build '
-
-           }
+            sshagent(credentials : ['ec2-user'])
+            {
+            sh 'ssh -o StrictHostKeyChecking=no ec2-user@10.0.2.119 uptime'
+            sh 'ssh -v ec2-user@10.0.2.119'
+            sh 'scp * ec2-user@10.0.2.119:/home'
+            sh 'ssh ec2-user@10.0.2.119 docker-compose up --build  -d '
+            }
+            }
          }
        }
-        }
+     }
 
 
 
