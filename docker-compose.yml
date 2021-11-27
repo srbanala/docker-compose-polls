@@ -28,7 +28,7 @@ services:
     build: .
     ports:
       - '8000:8000'
-    dependes_on: postgres
+    depends_on: postgres
 volumes:
    pg_data:
 
