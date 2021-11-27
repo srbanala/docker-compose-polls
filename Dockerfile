@@ -30,4 +30,4 @@ COPY ./ ./
 # Run Default Command.
 
 #RUN export PATH=$PATH:/usr/dev/venv/bin
-#CMD ["/usr/dev/venv/bin/python3" ,"./mysite/manage.py","runserver","0:8080"]
+CMD ["/usr/dev/venv/bin/python3" ,"./mysite/manage.py","runserver","0:8000"]
