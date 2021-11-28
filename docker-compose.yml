@@ -7,11 +7,12 @@ services:
     environment:
       restart: 'always'
       POSTGRES_USER: 'postgres'
-      POSTGRES_PASSWORD: 'welcome1'
+      #POSTGRES_PASSWORD: 'welcome1'
       POSTGRES_DB: 'postgres'
       HOST: '0.0.0.0'
       PORT : '5432'
       TIMEZONE: 'UTC'
+      POSTGRES_PASSWORD_FILE: /var/run/secrets/postgres-password
 
     volumes:
      - pg_data:/var/lib/postgresql/data
