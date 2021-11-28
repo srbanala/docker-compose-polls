@@ -6,13 +6,14 @@ services:
     image: 'postgres'
     environment:
       restart: 'always'
-      POSTGRES_USER: 'postgres'
-      #POSTGRES_PASSWORD: 'welcome1'
+      #POSTGRES_USER: 'postgres'
+      #POSTGRES_PASSWORD: 'mypassword' # No need of it if using swarm secrets feature as below
       POSTGRES_DB: 'postgres'
       HOST: '0.0.0.0'
       PORT : '5432'
       TIMEZONE: 'UTC'
-      POSTGRES_PASSWORD: /var/run/secrets/postgres-password
+      POSTGRES_USER: /var/run/secrets/postgres-user # using secrets from docker swarm
+      POSTGRES_PASSWORD: /var/run/secrets/postgres-password # using secrets from docker swarm
 
     volumes:
      - pg_data:/var/lib/postgresql/data
