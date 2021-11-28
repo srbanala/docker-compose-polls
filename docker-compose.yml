@@ -24,6 +24,8 @@ services:
       PORT: '80'
     ports:
       - '80:80'
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin/data
 
   django-polls:
     build: .
@@ -32,6 +34,7 @@ services:
     depends_on: ["postgres"]
 volumes:
    pg_data:
+   pgadmin_data:
 
 
 
