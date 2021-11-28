@@ -26,6 +26,7 @@ services:
       - '80:80'
     volumes:
       - pgadmin_data:/var/lib/pgadmin/data
+      - pgadmin_data:/var/lib/pgadmin
 
   django-polls:
     build: .
