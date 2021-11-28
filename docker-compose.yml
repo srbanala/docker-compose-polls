@@ -12,7 +12,7 @@ services:
       HOST: '0.0.0.0'
       PORT : '5432'
       TIMEZONE: 'UTC'
-      POSTGRES_PASSWORD_FILE:/var/run/secrets/postgres-password
+      POSTGRES_PASSWORD: /var/run/secrets/postgres-password
 
     volumes:
      - pg_data:/var/lib/postgresql/data
