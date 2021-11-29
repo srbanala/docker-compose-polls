@@ -7,7 +7,7 @@ services:
     environment:
       restart: 'always'
       POSTGRES_USER: 'postgres'
-      POSTGRES_PASSWORD: 'welcome' # No need of it if using swarm secrets feature as below
+      POSTGRES_PASSWORD: 'welcome1' # No need of it if using swarm secrets feature as below
       POSTGRES_DB: 'postgres'
       HOST: '0.0.0.0'
       PORT : '5432'
