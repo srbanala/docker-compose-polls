@@ -47,9 +47,9 @@ volumes:
 
 secrets:
   postgres-user:
-    file: ./secrets/user # using secrets from docker swarm
+    file: ./secrets/user.txt # using secrets from docker swarm
   postgres-password:
-    file: ./secrets/password_file # using secrets from docker swarm
+    file: ./secrets/password_file.txt # using secrets from docker swarm
 
 
 
