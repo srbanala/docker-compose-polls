@@ -5,7 +5,7 @@ services:
   postgres:
     image: 'postgres'
     secrets:
-      - prostgres-user
+      - postgres-user
       - postgres-password
     environment:
       restart: 'always'
