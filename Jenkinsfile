@@ -26,7 +26,7 @@ pipeline {
             sh 'ssh -o StrictHostKeyChecking=no ec2-user@10.0.2.142 uptime'
             sh 'ssh -v ec2-user@10.0.2.142'
             sh 'scp -r * ec2-user@10.0.2.142:/home/ec2-user'
-            sh 'ssh ec2-user@10.0.2.142 docker-compose up --build  -d '
+            sh 'ssh ec2-user@10.0.2.142 docker stack deploy -c docker-compose.yml polls '
             }
             }
          }

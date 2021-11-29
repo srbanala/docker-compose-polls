@@ -36,6 +36,7 @@ services:
 
   django-polls:
     build: .
+    image: anreddy/docker_compose_polls
     ports:
       - '8000:8000'
     depends_on: ["postgres"]
