@@ -14,6 +14,7 @@ pipeline {
        stage ('Test'){
          steps {
           sh ' docker run -t anreddy/docker_compose_polls python3 ./mysite/manage.py test run'
+          sh ' docker push anreddy/docker_compose_polls'
             }
           }
 
