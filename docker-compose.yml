@@ -5,8 +5,8 @@ services:
   postgres:
     image: 'postgres'
     secrets:
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
+      - postgres-user
+      - postgres-password
     environment:
       restart: 'always'
       #POSTGRES_USER: 'postgres'
