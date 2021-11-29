@@ -4,6 +4,9 @@ services:
 
   postgres:
     image: 'postgres'
+    secrets:
+      - prostgres-user
+      - postgres-password
     environment:
       restart: 'always'
       #POSTGRES_USER: 'postgres'
