@@ -17,8 +17,8 @@ services:
 
     volumes:
      - pg_data:/var/lib/postgresql/data
-     - v /var/lib/docker/volumes/secrets : /run/secrets
-     - v /var/lib/docker/volumes/secrets : /run/secrets
+     - v /var/lib/docker/volumes/secrets:/run/secrets
+     - v /var/lib/docker/volumes/secrets:/run/secrets
 
   pgadmin:
     image: 'dpage/pgadmin4'
