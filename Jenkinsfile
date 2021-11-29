@@ -8,6 +8,7 @@ pipeline {
        stage ('Build') {
          steps {
           sh 'docker build -t anreddy/docker_compose_polls . '
+          sh 'echo "$DOCKER_CREDS_PW"|docker login -u "$DOCKER_CREDS_USR" --password-stdin '
           sh ' docker push  anreddy/docker_compose_polls'
              }
           }
