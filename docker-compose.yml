@@ -5,8 +5,8 @@ services:
   postgres:
     image: 'postgres'
     secrets:
-      - postgres-user
-      - postgres-password
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
     environment:
       restart: 'always'
       #POSTGRES_USER: 'postgres'
@@ -47,9 +47,9 @@ volumes:
 
 secrets:
   postgres-user:
-    file: ./secrets/user.txt # using secrets from docker swarm
+    external: POSTGRES_USER
   postgres-password:
-    file: ./secrets/password_file.txt # using secrets from docker swarm
+    external: POSTGRES_PASSWORD
 
 
 
