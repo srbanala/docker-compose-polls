@@ -15,8 +15,8 @@ services:
       HOST: '0.0.0.0'
       PORT : '5432'
       TIMEZONE: 'UTC'
-      POSTGRES_USER: /run/secrets/postgres-user # using secrets from docker swarm
-      POSTGRES_PASSWORD: /run/secrets/postgres-password # using secrets from docker swarm
+      POSTGRES_USER_FILE: /run/secrets/postgres-user # using secrets from docker swarm
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres-password # using secrets from docker swarm
 
     volumes:
      - pg_data:/var/lib/postgresql/data
@@ -47,9 +47,9 @@ volumes:
 
 secrets:
   postgres-user:
-    file: /var/lib/docker/volumes/secrets/user # using secrets from docker swarm
+    file: ./secrets/user # using secrets from docker swarm
   postgres-password:
-    file: /var/lib/docker/volumes/secrets/password_file # using secrets from docker swarm
+    file: ./secrets/password_file # using secrets from docker swarm
 
 
 
