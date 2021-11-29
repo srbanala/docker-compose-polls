@@ -22,10 +22,10 @@ pipeline {
             sh ' chmod 777 * '
             sshagent(credentials : ['ec2-user'])
             {
-            sh 'ssh -o StrictHostKeyChecking=no ec2-user@10.0.2.180 uptime'
-            sh 'ssh -v ec2-user@10.0.2.180'
-            sh 'scp -r * ec2-user@10.0.2.180:/home/ec2-user'
-            sh 'ssh ec2-user@10.0.2.180 docker-compose up --build  -d '
+            sh 'ssh -o StrictHostKeyChecking=no ec2-user@10.0.2.142 uptime'
+            sh 'ssh -v ec2-user@10.0.2.142'
+            sh 'scp -r * ec2-user@10.0.2.142:/home/ec2-user'
+            sh 'ssh ec2-user@10.0.2.142 docker-compose up --build  -d '
             }
             }
          }
