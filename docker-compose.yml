@@ -40,7 +40,7 @@ services:
 volumes:
   pg_data:
   pgadmin_data:
-  /var/lib/docker/volumes/secrets:/run/secrets
+  -v /var/lib/docker/volumes/secrets:/run/secrets
 
 secrets:
   postgres-user:
