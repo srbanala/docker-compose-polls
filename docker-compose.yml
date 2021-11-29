@@ -47,9 +47,9 @@ volumes:
 
 secrets:
   postgres-user:
-    external: POSTGRES_USER
+    external: true
   postgres-password:
-    external: POSTGRES_PASSWORD
+    external: true
 
 
 
