@@ -25,10 +25,10 @@ pipeline {
             sh ' chmod 777 * '
             sshagent(credentials : ['ec2-user'])
             {
-            sh 'ssh -o StrictHostKeyChecking=no ec2-user@10.0.2.94 uptime'
-            sh 'ssh -v ec2-user@10.0.2.94'
-            sh 'scp -r * ec2-user@10.0.2.94:/home/ec2-user'
-            sh 'ssh ec2-user@10.0.2.94 docker stack deploy -c docker-compose.yml polls '
+            sh 'ssh -o StrictHostKeyChecking=no ec2-user@10.0.2.181 uptime'
+            sh 'ssh -v ec2-user@10.0.2.181'
+            sh 'scp -r * ec2-user@10.0.2.181:/home/ec2-user'
+            sh 'ssh ec2-user@10.0.2.181 docker stack deploy -c docker-compose.yml polls '
             }
             }
          }
