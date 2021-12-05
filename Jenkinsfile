@@ -25,7 +25,7 @@ pipeline {
             sh ' chmod 777 * '
             sshagent(credentials : ['ec2-user'])
             {
-            sh 'echo added port 22 '
+            sh 'echo added port 22'
             sh 'ssh -o StrictHostKeyChecking=no ec2-user@10.0.1.58 uptime'
             sh 'ssh -v ec2-user@10.0.1.58'
             sh 'scp -r * ec2-user@10.0.1.58:/home/ec2-user'
