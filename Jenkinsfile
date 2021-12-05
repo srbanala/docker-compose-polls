@@ -26,10 +26,10 @@ pipeline {
             sshagent(credentials : ['ec2-user'])
             {
             sh 'echo added port 22 '
-            sh 'ssh -o StrictHostKeyChecking=no ec2-user@10.0.1.217 uptime'
-            sh 'ssh -v ec2-user@10.0.1.217'
-            sh 'scp -r * ec2-user@10.0.1.217:/home/ec2-user'
-            sh 'ssh ec2-user@10.0.1.217 docker stack deploy -c docker-compose.yml polls '
+            sh 'ssh -o StrictHostKeyChecking=no ec2-user@10.0.1.58 uptime'
+            sh 'ssh -v ec2-user@10.0.1.58'
+            sh 'scp -r * ec2-user@10.0.1.58:/home/ec2-user'
+            sh 'ssh ec2-user@10.0.1.58 docker stack deploy -c docker-compose.yml polls '
             }
             }
          }
