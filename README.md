@@ -17,5 +17,18 @@ Commands for creating secrets in docker using files.
 
 docker secret create postgres-user filename
 
+######################## Docker Swarm commands#########
+
+1.TO install docker swarm ,execute below command.
+   docker swarm init
+
+2. To add worker node to swarm cluster ,execute on leader nod
+    docker swarm join --token
+
+3. To add manager to this swarm,execute on leader node
+   docker swarm join-token manager 
+
+
+
 
 

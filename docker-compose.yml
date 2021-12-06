@@ -37,7 +37,7 @@ services:
     ports:
       - '8000:8000'
     depends_on: ["postgres"]
-    replicas: '2'
+
 
 
 volumes:
@@ -49,3 +49,7 @@ secrets:
     external: true
   postgres-password:
     external: true
+
+networks:
+  driver: overlay
+  name: polls-network
