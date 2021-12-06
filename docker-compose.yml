@@ -44,8 +44,6 @@ services:
     networks:
       - polls_overlay
 
-
-
 volumes:
   pg_data:
   pgadmin_data:
