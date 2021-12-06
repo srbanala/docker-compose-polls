@@ -57,7 +57,7 @@ secrets:
     external: true
 
 networks:
-  frontend:
+  default:
+    external: true
     name: polls_overlay
-    driver: overlay
 
