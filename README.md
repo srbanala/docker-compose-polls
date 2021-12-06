@@ -11,6 +11,7 @@ secrets:
 
 command for creating secrets in docker from command line.
 echo "postgres"|docker secret create postgres-user -
+
 echo "welcome1"|docker secret create postgres-password -
 
 Commands for creating secrets in docker using files.
