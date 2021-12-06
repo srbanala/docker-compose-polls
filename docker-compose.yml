@@ -19,7 +19,8 @@ services:
       POSTGRES_PASSWORD_FILE: /run/secrets/postgres-password   # using secrets from docker swarm
     volumes:
       - pg_data:/var/lib/postgresql/data
-    networks:  polls_overlay
+    networks:
+      - polls_overlay
 
   pgadmin:
     image: 'dpage/pgadmin4'
@@ -31,7 +32,8 @@ services:
       - '80:80'
     volumes:
       - pgadmin_data:/var/lib/pgadmin
-    networks: polls_overlay
+    networks:
+      - polls_overlay
 
   django-polls:
     build: .
@@ -39,7 +41,8 @@ services:
     ports:
       - '8000:8000'
     depends_on: ["postgres"]
-    networks: polls_overlay
+    networks:
+      - polls_overlay
 
 
 
