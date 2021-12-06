@@ -50,6 +50,3 @@ secrets:
   postgres-password:
     external: true
 
-networks:
-  driver: overlay
-  name: polls_network
