@@ -58,4 +58,4 @@ secrets:
 
 networks:
   driver: 'overlay'
-  name: 'polls_overlay'
+   name: 'polls_overlay'
