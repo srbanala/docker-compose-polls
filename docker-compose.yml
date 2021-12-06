@@ -37,6 +37,7 @@ services:
     ports:
       - '8000:8000'
     depends_on: ["postgres"]
+    replicas: '2'
 
 
 volumes:
