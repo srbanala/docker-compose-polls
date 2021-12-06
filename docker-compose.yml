@@ -52,4 +52,4 @@ secrets:
 
 networks:
   driver: overlay
-  name: polls-network
+  name: polls_network
