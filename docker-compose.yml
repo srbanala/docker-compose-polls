@@ -57,5 +57,5 @@ secrets:
     external: true
 
 networks:
-  driver: 'overlay'
+  driver: overlay
    name: 'polls_overlay'
